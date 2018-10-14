@@ -1,7 +1,5 @@
 # **Traffic Sign Classifier CNN Writeup** 
 
-## **Build a Traffic Sign Recognition Project**
-
 **Objectives:**
 1. Load the data set 
 2. Explore, summarize and visualize the data set
@@ -29,6 +27,7 @@ Here is an exploratory visualization of the data set showing few images of the d
 ![data](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/data.png)
 
 Following are bar chart representations of the distributuion of traffic signs based on their classes/labels in the training, validation and test datasets:
+
 ![train1](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/train1.png)
 
 ![valid1](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/valid1.png)
