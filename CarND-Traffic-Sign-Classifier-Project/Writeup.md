@@ -40,9 +40,10 @@ Following are bar chart representations of the distributuion of traffic signs ba
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. 
 
 As the traffic signs were captured in different lighting conditions, I decided to perform a histogram equalization on all the images to even out the spread of light intensity to improve the overall contrast of the images.
+
 **Histogram Equalization output:**
 
-![hist][https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/hist.png]
+![hist](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/hist.png)
 
 
 
