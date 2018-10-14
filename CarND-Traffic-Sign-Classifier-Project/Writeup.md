@@ -2,14 +2,14 @@
 
 ## **Build a Traffic Sign Recognition Project**
 
-Objectives:
+**Objectives:**
 1. Load the data set 
 2. Explore, summarize and visualize the data set
 3. Design, train and test a model architecture
 4. Use the model to make predictions on new images
 5. Analyze the softmax probabilities of the new images
 ---
-### Explaination
+## Explaination
 
 ### Data Set Summary & Exploration
 
@@ -25,8 +25,16 @@ I used the numpy library to calculate summary statistics of the traffic signs da
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set showing few images in the dataset:
+Here is an exploratory visualization of the data set showing few images of the dataset:
 ![data](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/data.png)
+
+Following are bar chart representations of the distributuion of traffic signs based on their classes/labels in the training, validation and test datasets:
+![train1](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/train1.png)
+
+![valid1](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/valid1.png)
+
+![test1](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/test1.png)
+
 
 ### Design and Test a Model Architecture
 
