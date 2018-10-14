@@ -41,19 +41,9 @@ Following are bar chart representations of the distributuion of traffic signs ba
 
 As the traffic signs were captured in different lighting conditions, I decided to perform a histogram equalization on all the images to even out the spread of light intensity to improve the overall contrast of the images.
 **Histogram Equalization output:**
+
 ![hist][https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/hist.png]
 
-As a last step, I normalized the image data because ...
-
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
-
-The difference between the original data set and the augmented data set is the following ... 
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
