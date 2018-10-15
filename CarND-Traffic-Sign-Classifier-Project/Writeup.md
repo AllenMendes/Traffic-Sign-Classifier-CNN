@@ -39,12 +39,25 @@ Following are bar chart representations of the distributuion of traffic signs ba
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. 
 
-As the traffic signs were captured in different lighting conditions, I decided to perform a histogram equalization on all the images to even out the spread of light intensity to improve the overall contrast of the images.
+As the traffic signs were captured in different lighting conditions, I decided to perform a histogram equalization on all the images to even out the spread of light intensity thereby improving the overall contrast of the images.
 
 **Histogram Equalization output:**
 
 ![hist](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/hist.png)
 
+Next I converted all the images into its grayscale equivalent as I didn't want the model to learn the color features of the traffic signs (as shapes are more important for traffic sign).
+
+**Grayscale output:**
+
+![gray](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/gray.png)
+
+Then I normalized all the images to a new range of (-1,1). Below is the output for one of the images in the dataset. 
+
+**Normalization output:**
+
+![norm](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/norm.png)
+
+As observed from the distribution charts of the number images per class/label, few classes have far more images than the other classes. This may make the model to lean towards false positives or the classes/labels having more images just because of the non unifrom distribution of images over all classes/labels. Hence to augment the dataset, I performed random scaling, translation, warping and brightness change to the images of the classes/labels which had less than 1000 images.
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
