@@ -57,7 +57,33 @@ Then I normalized all the images to a new range of (-1,1). Below is the output f
 
 ![norm](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/norm.png)
 
-As observed from the distribution charts of the number images per class/label, few classes have far more images than the other classes. This may make the model to lean towards false positives or the classes/labels having more images just because of the non unifrom distribution of images over all classes/labels. Hence to augment the dataset, I performed random scaling, translation, warping and brightness change to the images of the classes/labels which had less than 1000 images.
+As observed from the distribution charts of the number images per class/label, few classes have far more images than the other classes. This may make the model to lean towards false positives or the classes/labels having more images just because of the non unifrom distribution of images over all classes/labels. Hence to augment the dataset, I performed random scaling, translation, warping and brightness change to the images of the classes/labels which had less than 1000 images. Following are the outputs of the pre-processing techniques I used to augment the dataset:
+
+**Random Scaling:**
+
+![scale](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/scaled.png)
+
+**Random Translation:**
+
+![trans](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/translate.png)
+
+**Random Warping:**
+
+![warp](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/warp.png)
+
+**Random Brightness change:**
+
+![bright](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/bright.png)
+
+### Dataset size before data augmentation- 34799 images
+
+![before](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/before_aug.png)
+
+### Dataset size after data augmentation- 51690 images
+
+![after](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/after_aug.png)
+
+
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
