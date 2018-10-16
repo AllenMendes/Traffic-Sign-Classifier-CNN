@@ -117,10 +117,10 @@ My final model consisted of the following layers:
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 To train the model, I used an the following hyperparameters:
-Optimizer - Adam
-Batch size - 75
-Epochs - 150
-Learning rate - 0.0009
+* Optimizer - Adam
+* Batch size - 75
+* Epochs - 150
+* Learning rate - 0.0009
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
@@ -150,7 +150,7 @@ I was pretty amazed to see that the model accurately guessed all the 12 test ima
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. 
 
-As seen from the above result, the model predicted all the images with 100% accuracy. I even included a 2nd and 3rd guess result based on the softmax probablity values. If you observe closely the below few predictions, you can see that model is trying to co relate shapes of arrow signs, circular shaped traffic signs, etc. and other such shape related features found in the test images to make its predictions.
+As seen from the above result, the model predicted all the images with 100% accuracy. I even included a 2nd and 3rd guess result based on the softmax probablity values. If you observe closely the below few predictions, you can see that model is trying to co relate shapes of arrow signs, human shaped figures, circular shaped traffic signs, etc. and other such shape related features found in the test images to make its predictions.
 
 ![ob](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/ob.JPG)
 
