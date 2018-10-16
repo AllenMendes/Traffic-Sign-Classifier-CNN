@@ -57,7 +57,7 @@ Then I normalized all the images to a new range of (-1,1). Below is the output f
 
 ![norm](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/norm.png)
 
-As observed from the distribution charts of the number images per class/label, few classes have far more images than the other classes. This may make the model to lean towards false positives or the classes/labels having more images just because of the non unifrom distribution of images over all classes/labels. Hence to augment the dataset, I performed random scaling, translation, warping and brightness change to the images of the classes/labels which had less than 1000 images. Following are the outputs of the pre-processing techniques I used to augment the dataset:
+As observed from the distribution charts of the number images per class/label, few classes have far more images than the other classes. This may make the model to lean towards false positives or the classes/labels having more images just because of the non unifrom distribution of images over all classes/labels. Hence to augment the dataset, I performed random scaling, translation, warping and brightness change to the images of the classes/labels which had less than 1000 images so that all classess/labels contain atleast 1000 images each. Following are the outputs of the pre-processing techniques I used to augment the dataset:
 
 **Random Scaling:**
 
@@ -75,33 +75,44 @@ As observed from the distribution charts of the number images per class/label, f
 
 ![bright](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/bright.png)
 
-### Dataset size before data augmentation- 34799 images
+***Dataset size and distribution before data augmentation- 34799 images***
 
 ![before](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/before_aug.png)
 
-### Dataset size after data augmentation- 51690 images
+***Dataset size and distribution after data augmentation- 51690 images***
 
 ![after](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Downloads/after_aug.png)
 
 
-
-
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+
+After considering multiple options for my CNN architecture, I decided on a multi-layer deep inception block (Multimodal) based approach for my final model architecture. At each layer, multiple filters would learn different features about a single image to generalize the model. This helped me achieve an ***accuracy of 96.6%*** over the given dataset.
+
+## CNN architecture
+
+![CNN](https://github.com/AllenMendes/Traffic-Sign-Classifier-CNN/blob/master/CarND-Traffic-Sign-Classifier-Project/Traffic-Classifier-CNN.JPG)
 
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Input         		| 32x32x1 Grayscale image   							| 
+| Convolution 5x5x6     	| 1x1 stride, Valid padding, Output 28x28x6 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
- 
+| Max pooling	      	| 2x2 stride,  Valid padding, Outputs 14x14x6 				|
+| Convolutions 5x5x16, 3x3x16, 1x1x16	    | 1x1 stride, Valid padding, Outputs 10x10x16, 12x12x16, 14x14x16 |
+| RELU					|												|
+| Average pooling	      	| 2x2 stride,  Valid padding, Outputs 14x14x6 				|
+| Convolutions 3x3x100 on each of the 3 layers   | 1x1 stride, Valid padding, Outputs 3x3x100, 4x4x100, 5x5x100 |
+| RELU					|												|
+| Flatten 3 layers and concat in 1 inception block					|			Output: 900+1600+2500 = 5000									|
+| RELU					|												|
+| Dropout					|					keep_prob = 50%							|
+| Fully connected		| 5000 -> 1000        									|
+| RELU					|												|
+| Dropout					|					keep_prob = 50%							|
+| Fully connected		| 1000 -> 43        									|
+| Softmax	logits			| 								|
 
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
