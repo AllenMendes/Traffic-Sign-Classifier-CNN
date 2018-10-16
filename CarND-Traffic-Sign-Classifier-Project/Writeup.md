@@ -112,19 +112,22 @@ My final model consisted of the following layers:
 | RELU					|												|
 | Dropout					|					keep_prob = 50%							|
 | Fully connected		| 1000 -> 43        									|
-| Softmax	logits			| 								|
 
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an ....
+To train the model, I used an the following hyperparameters:
+Optimizer - Adam
+Batch size - 75
+Epochs - 150
+Learning rate - 0.0009
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+**** Training set accuracy - 100%
+* Validation set accuracy - 99.7% 
+* Test set accuracy - 96.6%***
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
@@ -182,7 +185,5 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 For the second image ... 
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
 
